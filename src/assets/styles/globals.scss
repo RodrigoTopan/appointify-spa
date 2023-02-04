@@ -1,0 +1,23 @@
+.font-weight {
+	&__extralight {
+		font-weight: 200;
+	}
+	&__light {
+		font-weight: 300;
+	}
+	&__regular {
+		font-weight: 400;
+	}
+	&__medium {
+		font-weight: 500;
+	}
+	&__semibold {
+		font-weight: 600;
+	}
+	&__bold {
+		font-weight: 700;
+	}
+	&__extrabold {
+		font-weight: 800;
+	}
+}
