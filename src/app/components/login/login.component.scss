@@ -1,14 +1,12 @@
 @import '../../../assets/styles/font-face.scss';
 @import '../../../assets/styles/globals.scss';
+@import '../../../assets/styles/mixins.scss';
 
 .login-container {
-	height: 592px;
+	@include flexColumnCenter;
+	@include padding-container;
+	height: 100%;
 	background-color: #3146E6;
-	padding: 6.66666667vw; // 24px
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	gap: 16px;
 
 	&__text {
@@ -41,5 +39,4 @@
 	.text-regular {
 		font-size: 16px;
 	}
-
 }
