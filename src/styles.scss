@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	width: 100vw;
 	height: 100vh;
-	margin: 0;
-	padding: 0;
 	font-family: 'Mulish', sans-serif;
 }
 
 p {
 	margin: 0;
+}
+
+input {
+	padding: 0;
 }

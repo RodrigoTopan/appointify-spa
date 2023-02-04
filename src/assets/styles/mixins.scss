@@ -1,0 +1,10 @@
+@mixin flexColumnCenter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin padding-container {
+	padding: 6.66666667vw; // 24px
+}
