@@ -24,10 +24,12 @@ export class LoginFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-	changeVisibility(campoId: string) {
+	changeVisibility(fieldId: string) {
 		this.isPasswordVisibilityOn = !this.isPasswordVisibilityOn;
-		const campo = document.getElementById(campoId) as HTMLElement;
-		this.isPasswordVisibilityOn ? campo.setAttribute('type', 'text') : campo.setAttribute('type', 'password');
+		const field = document.getElementById(fieldId) as HTMLElement;
+		this.isPasswordVisibilityOn ? 
+			field.setAttribute('type', 'text') : 
+			field.setAttribute('type', 'password');
 	}
 
 	setVisibilityOn(element: HTMLElement) {
@@ -41,16 +43,18 @@ export class LoginFormComponent implements OnInit {
 	}
 
 	submitForm() {
-		if (this.loginForm.valid) {
-			this.formInvalido = false;
-			this.loginService.post(this.loginForm.value).subscribe({
-				next: res => {
-					console.log(res);
-				}
-			});
-		} else {
+		if(!this.loginForm.valid){
 			this.formInvalido = true;
+			return;
 		}
+		this.formInvalido = false;
+		this.loginService
+		.post(this.loginForm.value)
+		.subscribe({
+			next: res => {
+				console.log(res);				
+			}	
+		});
 	}
 
 }

@@ -8,11 +8,12 @@ import { LoginReq, LoginRes } from '../models/login';
 })
 
 export class LoginService {
-	baseUrl = 'https://modern-dream-376721.rj.r.appspot.com/';
+	//baseUrl = 'https://modern-dream-376721.rj.r.appspot.com/';
+	baseUrl = 'http://localhost:8080';
 	endpoints = {
 		login: {
-			register: 'users/register',
-			authenticate: 'users/authenticate'
+			register: '/users/register',
+			authenticate: '/users/authenticate'
 		}
 	}
 
