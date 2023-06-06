@@ -1,0 +1,38 @@
+.card {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(226, 224, 224);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.card-image {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.card-title {
+  padding: 10px;
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}

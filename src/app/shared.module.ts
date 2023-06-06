@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginFormComponent } from './components/login/login-form/login-form.component';
-import { HomeComponent } from './components/home/home.component';
+import { LoginFormComponent } from './pages/login/login-form/login-form.component';
+import { HeaderComponent } from './pages/components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CardComponent } from './pages/components/card/card.component';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
     LoginComponent,
 		LoginFormComponent,
+    HeaderComponent,
+    CardComponent,
     HomeComponent
   ],
   imports: [
+    RouterModule,
     CommonModule,
 		ReactiveFormsModule,
 		HttpClientModule
@@ -20,6 +27,8 @@ import { HomeComponent } from './components/home/home.component';
   exports: [
     LoginComponent,
 		LoginFormComponent,
+    HeaderComponent,
+    CardComponent,
     HomeComponent
   ]
 })

@@ -1,0 +1,78 @@
+.app-container {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-main {
+  margin-bottom: 40px;
+  overflow-y: auto;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content h1 {
+  margin-top: 0;
+}
+
+.search-bar {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.search-input {
+  display: inline-block;
+  width: 80%;
+}
+
+.search-input input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.section-list {
+  display: flex;
+  flex-wrap: wrap;
+}

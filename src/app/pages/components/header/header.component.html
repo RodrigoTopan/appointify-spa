@@ -1,0 +1,24 @@
+<header class="header">
+    <div class="logo">
+        <img src="../../../assets/images/banner2.jpg" alt="Apointify Logo">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="/appointments">Meus agendamentos</a></li>
+            <li><a routerLink="/categories">Categorias</a></li>
+            <li>
+                <a (click)="openProfileModal()">Perfil</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="modal" *ngIf="isModalOpen">
+    <div class="modal-content">
+        <!-- Conteúdo do modal -->
+        <h2>Perfil</h2>
+        <!-- Outros elementos do perfil -->
+        <button class="modal-close" (click)="closeProfileModal()">Fechar</button>
+    </div>
+</div>

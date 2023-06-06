@@ -1,0 +1,44 @@
+<div class="app-container">
+    <header-component></header-component>
+
+    <main class="app-main">
+
+        <div class="banner">
+            <div class="banner-content">
+                <h1>Apointify</h1>
+                <p>Gestão inteligente de agendamentos</p>
+            </div>
+            <div class="search-bar">
+                <div class="search-input">
+                    <input type="text" placeholder="Buscar um serviço ou estabelecimento">
+                </div>
+                <button class="search-button">Buscar</button>
+            </div>
+            <img src="../../../assets/images/banner3.jpg" alt="Apointify Banner">
+        </div>
+
+        <section class="section">
+            <h2>Meus agendamentos</h2>
+            <div class="section-list">
+                <card-component *ngFor="let category of categories" [imageUrl]="category.image"
+                    [name]="category.name"></card-component>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Serviços Recentes</h2>
+            <div class="section-list">
+                <card-component *ngFor="let category of categories" [imageUrl]="category.image"
+                    [name]="category.name"></card-component>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Categorias em Alta</h2>
+            <div class="section-list">
+                <card-component *ngFor="let category of categories" [imageUrl]="category.image"
+                    [name]="category.name"></card-component>
+            </div>
+        </section>
+    </main>
+</div>
