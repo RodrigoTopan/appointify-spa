@@ -1,16 +1,16 @@
 .card {
   width:300px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-right: 2.53164557vw; // 20px
+  margin-bottom: 2.53164557vw; // 20px
   background-color: rgb(226, 224, 224);
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0.25316456vw 8px rgba(0, 0, 0, 0.7); // 0 2px 8px
   overflow: hidden;
   transition: box-shadow 0.3s;
 }
 
 .card:hover {
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2.53164557vw 2.53164557vw rgba(0, 0, 0, 0.4); // 0 20p 20px
 }
 
 .card-image-default {
@@ -42,12 +42,12 @@
 }
 
 .card-title {
-  padding: 10px;
+  padding: 1.26582278vw; // 10px
   text-align: center;
 }
 
 .card-body {
-  padding: 10px;
+  padding: 1.26582278vw; // 10px
   text-align: center;
 }
 
