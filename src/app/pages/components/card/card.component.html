@@ -1,10 +1,10 @@
 <div class="card">
     
     <div *ngIf="imageUrl" class="card-image">
-        <img [src]="imageUrl" [alt]="name + ' Image'">
+        <img [src]="imageUrl">
     </div>
     <div *ngIf="!imageUrl" class="card-image-default">
-        <img src="../../../../assets/images/schedule.png" [alt]="name + ' Image'">
+        <img src="../../../../assets/images/schedule.png">
     </div>
 
     <div *ngIf="serviceDescription" class="card-title">
