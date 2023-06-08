@@ -20,16 +20,12 @@
         <section class="section">
             <h2>Meus agendamentos</h2>
             <div class="section-list">
-                <card-component *ngFor="let category of categories" [imageUrl]="category.image"
-                    [name]="category.name"></card-component>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Serviços Recentes</h2>
-            <div class="section-list">
-                <card-component *ngFor="let category of categories" [imageUrl]="category.image"
-                    [name]="category.name"></card-component>
+                <card-component *ngFor="let appointment of appointments" 
+                    [imageUrl]="appointment.image"
+                    [name]="appointment.service.name"
+                    [description]="appointment.service.description"
+                    [price]="appointment.service.price">
+                </card-component>
             </div>
         </section>
 
@@ -38,6 +34,17 @@
             <div class="section-list">
                 <card-component *ngFor="let category of categories" [imageUrl]="category.image"
                     [name]="category.name"></card-component>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Serviços Recentes</h2>
+            <div class="section-list">
+                <card-component *ngFor="let service of usedServices"
+                    [name]="service.name"
+                    [description]="service.description"
+                    [price]="service.price">
+                </card-component>
             </div>
         </section>
     </main>

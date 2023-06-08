@@ -1,4 +1,5 @@
 .card {
+  width:300px;
   margin-right: 20px;
   margin-bottom: 20px;
   background-color: rgb(226, 224, 224);
@@ -9,11 +10,26 @@
 }
 
 .card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-image-default {
+  background-color: rgb(224, 221, 221);
+  height: 300px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image-default img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .card-image {
-  height: 150px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,6 +42,11 @@
 }
 
 .card-title {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-body {
   padding: 10px;
   text-align: center;
 }
