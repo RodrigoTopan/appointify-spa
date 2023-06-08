@@ -1,4 +1,10 @@
+
+
+/* Restante do código CSS */
+
 .header {
+  position: relative;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,16 +15,37 @@
   height: 50px;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggle {
+  display: none; /* Ocultar botão em telas maiores */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin-bottom: 5px;
+}
+
 .navbar ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
 }
 
 .navbar li {
   margin-right: 10px;
-  text-decoration: none;
 }
 
 .navbar a {
@@ -28,13 +55,13 @@
 }
 
 .modal {
-  display: none; /* Inicialmente oculto */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
 }
 
@@ -59,3 +86,30 @@
   color: red;
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block; /* Mostrar botão em telas menores */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Colocar itens em coluna em telas menores */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar ul.open {
+    transform: translateX(0); /* Mostrar menu ao ser aberto */
+  }
+
+  .navbar li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

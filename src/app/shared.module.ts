@@ -1,35 +1,53 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HttpClientModule} from '@angular/common/http';
-import { LoginComponent } from './pages/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+
+import { LoginComponent } from './pages/login/login.component';
 import { LoginFormComponent } from './pages/login/login-form/login-form.component';
 import { HeaderComponent } from './pages/components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './pages/components/card/card.component';
-import { RouterModule } from '@angular/router';
-
 
 @NgModule({
   declarations: [
     LoginComponent,
-		LoginFormComponent,
+    LoginFormComponent,
     HeaderComponent,
-    CardComponent,
-    HomeComponent
+    HomeComponent,
+    CardComponent
   ],
   imports: [
     RouterModule,
     CommonModule,
-		ReactiveFormsModule,
-		HttpClientModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatMenuModule
   ],
   exports: [
     LoginComponent,
-		LoginFormComponent,
+    LoginFormComponent,
     HeaderComponent,
-    CardComponent,
-    HomeComponent
+    HomeComponent,
+    CardComponent
   ]
 })
 export class SharedModule { }

@@ -5,47 +5,62 @@
 
         <div class="banner">
             <div class="banner-content">
-                <h1>Apointify</h1>
-                <p>Gestão inteligente de agendamentos</p>
-            </div>
-            <div class="search-bar">
-                <div class="search-input">
-                    <input type="text" placeholder="Buscar um serviço ou estabelecimento">
+                <div class="banner-title">
+                    <h1>Apointify</h1>
+                    <p>Gestão inteligente de agendamentos</p>
                 </div>
-                <button class="search-button">Buscar</button>
+                <div class="search-bar">
+                    <input class="search-input" type="text" placeholder="Buscar um serviço ou estabelecimento">
+                    <button class="search-button">Buscar</button>
+                </div>
             </div>
-            <img src="../../../assets/images/banner3.jpg" alt="Apointify Banner">
         </div>
 
         <section class="section">
             <h2>Meus agendamentos</h2>
             <div class="section-list">
-                <card-component *ngFor="let appointment of appointments" 
-                    [imageUrl]="appointment.image"
-                    [serviceName]="appointment.service.name"
-                    [serviceDescription]="appointment.service.description"
-                    [servicePrice]="appointment.service.price">
-                </card-component>
+                <div class="card" *ngFor="let appointment of appointments">
+                    <div class="card-title">
+                        <h3>Serviço: {{ appointment.service.name }}</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3>Descrição: {{ appointment.service.description }}</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3>Preço: R$ {{ appointment.service.price }}</h3>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section">
             <h2>Categorias em Alta</h2>
             <div class="section-list">
-                <card-component *ngFor="let category of categories" 
-                [imageUrl]="category.image"
-                [categoryName]="category.name"></card-component>
+                <div class="card" *ngFor="let category of categories">
+                    <div class="card-image">
+                        <img src={{category.image}}>
+                    </div>
+                    <div class="card-title">
+                        <h3>{{ category.name }}</h3>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section">
             <h2>Serviços Recentes</h2>
             <div class="section-list">
-                <card-component *ngFor="let service of usedServices"
-                    [serviceName]="service.name"
-                    [serviceDescription]="service.description"
-                    [servicePrice]="service.price">
-                </card-component>
+                <div class="card" *ngFor="let service of usedServices">
+                    <div class="card-title">
+                        <h3>{{ service.name }}</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3>{{ service.description }}</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3>R$ {{ service.price }}</h3>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

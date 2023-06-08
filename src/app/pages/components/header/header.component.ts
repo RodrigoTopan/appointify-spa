@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   isModalOpen: boolean = false;
+  isMenuOpen: boolean = false;
   
   constructor() { }
 
@@ -21,5 +22,13 @@ export class HeaderComponent implements OnInit {
 
   closeProfileModal() {
     this.isModalOpen = false;
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
   }
 }

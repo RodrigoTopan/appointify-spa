@@ -1,38 +1,33 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { JwtModule } from '@auth0/angular-jwt';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { SharedModule } from './shared.module';
-import { JWT_OPTIONS, JwtHelperService, JwtModule } from '@auth0/angular-jwt';
+import { AppComponent } from './app.component';
+import { JwtInterceptor } from './jwt.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    JwtModule.forRoot({
-      jwtOptionsProvider: {
-        provide: JWT_OPTIONS,
-        useFactory: jwtOptionsFactory,
-      },
-    }),
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     SharedModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => 'Bearer ' + localStorage.getItem('token'),
+        allowedDomains: ['*'], // Domínios permitidos para o envio do token
+        disallowedRoutes: ['/users/authenticate', '/users/register'], // Rotas onde o envio do token não é necessário
+      }
+    })
   ],
   providers: [
-    JwtHelperService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }
-
-export function jwtOptionsFactory() {
-  return {
-    tokenGetter: () => localStorage.getItem('token'),
-    allowedDomains: ['*'], // Domínios permitidos para o envio do token
-    disallowedRoutes: ['/users/authenticate','/users/register'], // Rotas onde o envio do token não é necessário
-  };
-}

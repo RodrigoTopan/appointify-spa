@@ -1,24 +1,25 @@
 <header class="header">
-    <div class="logo">
-        <img src="../../../assets/images/banner2.jpg" alt="Apointify Logo">
-    </div>
     <nav class="navbar">
-        <ul>
-            <li><a routerLink="/home">Home</a></li>
-            <li><a routerLink="/appointments">Meus agendamentos</a></li>
-            <li><a routerLink="/categories">Categorias</a></li>
-            <li>
-                <a (click)="openProfileModal()">Perfil</a>
-            </li>
-        </ul>
+      <button class="navbar-toggle" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul [class.open]="isMenuOpen">
+        <li><a routerLink="/home" (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/appointments" (click)="closeMenu()">Meus agendamentos</a></li>
+        <li><a routerLink="/categories" (click)="closeMenu()">Categorias</a></li>
+        <li><a (click)="openProfileModal(); closeMenu()">Perfil</a></li>
+      </ul>
     </nav>
-</header>
-
-<div class="modal" *ngIf="isModalOpen">
+  </header>
+  
+  <div class="modal" *ngIf="isModalOpen">
     <div class="modal-content">
-        <!-- Conteúdo do modal -->
-        <h2>Perfil</h2>
-        <!-- Outros elementos do perfil -->
-        <button class="modal-close" (click)="closeProfileModal()">Fechar</button>
+      <!-- Conteúdo do modal -->
+      <h2>Perfil</h2>
+      <!-- Outros elementos do perfil -->
+      <button class="modal-close" (click)="closeProfileModal()">Fechar</button>
     </div>
-</div>
+  </div>
+  
