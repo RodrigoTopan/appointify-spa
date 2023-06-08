@@ -7,16 +7,12 @@ import { JwtInterceptor, JwtHelperService, JwtConfig } from '@auth0/angular-jwt'
 @Injectable({
   providedIn: "root"
 })
-export class CategoriesService {
-  baseUrl = "http://localhost:8080/categories";
+export class CompaniesService {
+  baseUrl = "http://localhost:8080/companies";
   endpoints = {};
   constructor(private httpClient: HttpClient) {}
 
   getAll(): Observable<any> {
     return this.httpClient.get(this.baseUrl);
-  }
-
-  create(reqBody: CreateCategoryReq): Observable<any> {
-    return this.httpClient.post(this.baseUrl, reqBody);
   }
 }

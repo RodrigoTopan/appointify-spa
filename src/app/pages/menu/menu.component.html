@@ -1,0 +1,49 @@
+<div class="main-content">
+    <section class="section">
+        <h2>Meus agendamentos</h2>
+        <div class="section-list">
+            <div class="card" *ngFor="let appointment of appointments">
+                <div class="card-title">
+                    <h3>Serviço: {{ appointment.service.name }}</h3>
+                </div>
+                <div class="card-body">
+                    <h3>Descrição: {{ appointment.service.description }}</h3>
+                </div>
+                <div class="card-body">
+                    <h3>Preço: R$ {{ appointment.service.price }}</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Categorias em Alta</h2>
+        <div class="section-list">
+            <div class="card" *ngFor="let category of categories" (click)="navigateToCategories()">
+                <div class="card-image"
+                    [ngStyle]="{'background-image': 'url(' + category.image + ')'}"
+                ></div>
+                <div class="card-title">
+                    <h3>{{ category.name }}</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Serviços Recentes</h2>
+        <div class="section-list">
+            <div class="card" *ngFor="let service of usedServices">
+                <div class="card-title">
+                    <h3>{{ service.name }}</h3>
+                </div>
+                <div class="card-body">
+                    <h3>{{ service.description }}</h3>
+                </div>
+                <div class="card-body">
+                    <h3>R$ {{ service.price }}</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

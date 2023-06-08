@@ -9,13 +9,10 @@ export class AppointmentsService {
 
   baseUrl = "http://localhost:8080/appointments";
   endpoints = {};
-  headers = {
-    Authorization: "Bearer " + localStorage.getItem("token")
-  };
 
   constructor(private httpClient: HttpClient) {}
 
   getAll(): Observable<any> {
-    return this.httpClient.get(this.baseUrl, { headers: this.headers});
+    return this.httpClient.get(this.baseUrl);
   }
 }

@@ -14,8 +14,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
-
   openProfileModal() {
     this.isModalOpen = true;
   }

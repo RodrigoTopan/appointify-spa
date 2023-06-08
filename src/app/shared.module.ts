@@ -18,6 +18,8 @@ import { LoginFormComponent } from './pages/login/login-form/login-form.componen
 import { HeaderComponent } from './pages/components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './pages/components/card/card.component';
+import { CategoryComponent } from './pages/category/category.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { CardComponent } from './pages/components/card/card.component';
     LoginFormComponent,
     HeaderComponent,
     HomeComponent,
-    CardComponent
+    CardComponent,
+    CategoryComponent,
+    MenuComponent
   ],
   imports: [
     RouterModule,
@@ -47,7 +51,9 @@ import { CardComponent } from './pages/components/card/card.component';
     LoginFormComponent,
     HeaderComponent,
     HomeComponent,
-    CardComponent
+    CardComponent,
+    CategoryComponent,
+    MenuComponent
   ]
 })
 export class SharedModule { }
