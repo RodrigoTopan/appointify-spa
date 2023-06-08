@@ -11,14 +11,8 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
-      {
-        path: '',
-        component: MenuComponent
-      },
-      {
-        path: 'categories',
-        component: CategoryComponent
-      }
+      { path: '', component: MenuComponent },
+      { path: 'categories/:id', component: CategoryComponent }
     ]
   },
 	// { path: '',   redirectTo: '/login', pathMatch: 'full' }

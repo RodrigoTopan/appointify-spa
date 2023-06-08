@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Category } from 'src/app/models/category';
 import { AppointmentsService } from 'src/app/services/appointments.service';
 import { CategoriesService } from 'src/app/services/categories.service';
 import { OfferedServicesService } from 'src/app/services/offered-services.service';
@@ -10,7 +11,7 @@ import { OfferedServicesService } from 'src/app/services/offered-services.servic
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  categories: any[] = [];
+  categories: Category[] = [];
   usedServices: any[] = [];
   appointments: any[] = [];
 
@@ -54,8 +55,7 @@ export class MenuComponent implements OnInit {
     });
   }
 
-  navigateToCategories() {
-    this.router.navigate(['/categories']);
+  navigateToCategories(categoryId: string) {
+    this.router.navigate(['/categories', categoryId]);
   }
-
 }

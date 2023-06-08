@@ -19,7 +19,7 @@
     <section class="section">
         <h2>Categorias em Alta</h2>
         <div class="section-list">
-            <div class="card" *ngFor="let category of categories" (click)="navigateToCategories()">
+            <div class="card" *ngFor="let category of categories" (click)="navigateToCategories(category.id)">
                 <div class="card-image"
                     [ngStyle]="{'background-image': 'url(' + category.image + ')'}"
                 ></div>
