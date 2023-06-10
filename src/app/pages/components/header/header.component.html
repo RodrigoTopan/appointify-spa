@@ -6,7 +6,7 @@
         <span></span>
       </button>
       <ul [class.open]="isMenuOpen">
-        <li><a routerLink="/home" (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
         <li><a routerLink="/appointments" (click)="closeMenu()">Meus agendamentos</a></li>
         <li><a routerLink="/categories" (click)="closeMenu()">Categorias</a></li>
         <li><a (click)="openProfileModal(); closeMenu()">Perfil</a></li>

@@ -18,6 +18,7 @@ export class LoginService {
   constructor(private httpClient: HttpClient) {}
 
   post(reqBody: LoginReq): Observable<any> {
+    console.log(reqBody)
     return this.httpClient.post(
       this.baseUrl + this.endpoints.login.authenticate,
       reqBody

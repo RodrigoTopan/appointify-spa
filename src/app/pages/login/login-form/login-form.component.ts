@@ -56,7 +56,7 @@ export class LoginFormComponent implements OnInit {
 		.post(this.loginForm.value)
 		.subscribe({
 			next: res => {
-				
+				console.log(res)
 				if (res.token) {
 					// Decodifica o token JWT
 					const decodedToken = this.jwtHelperService.decodeToken(res.token);
@@ -67,7 +67,7 @@ export class LoginFormComponent implements OnInit {
 					localStorage.setItem('username', res.username);
 					localStorage.setItem('role', res.role);
 					// Redireciona o usuário para o componente "Home"
-					this.router.navigate(['/home']);
+					this.router.navigate(['/']);
 				  }				
 			}	
 		});
