@@ -1,0 +1,16 @@
+<div *ngIf="company" class="main-content">
+    <section class="section">
+        <h2>Serviços na empresa {{ company.company.name }}</h2>
+        <div class="section-list">
+            <div *ngFor="let service of offeredServices" class="card">
+                <div [ngClass]="service.image ? 'card-image': 'card-image-default'">
+                </div>
+                <div class="card-title">
+                    <h3>{{ service.name }}</h3>
+                    <p class="card-text">{{ service.description }}</p>
+                    <p class="card-text">{{ service.price }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

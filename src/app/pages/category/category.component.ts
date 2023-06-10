@@ -4,6 +4,7 @@ import { Category } from 'src/app/models/category';
 import { Company } from 'src/app/models/company';
 import { CategoriesService } from 'src/app/services/categories.service';
 import { CompaniesService } from 'src/app/services/companies.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-category',
@@ -15,6 +16,7 @@ export class CategoryComponent implements OnInit {
   companies!: Company[];
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private categoriesService: CategoriesService,
   ) { }
@@ -33,5 +35,9 @@ export class CategoryComponent implements OnInit {
         console.log(this.categoria);
       }
     });
+  }
+
+  navigateToServices(companyId: string) {
+    this.router.navigate(['/companies', companyId]);
   }
 }

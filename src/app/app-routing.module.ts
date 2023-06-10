@@ -5,6 +5,7 @@ import { HomeComponent } from "./pages/home/home.component";
 import { CategoryComponent } from "./pages/category/category.component";
 import { MenuComponent } from "./pages/menu/menu.component";
 import { AuthGuard } from "./auth.guard";
+import { OfferedServiceComponent } from "./pages/offered-service/offered-service.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: "", component: MenuComponent },
-      { path: "categories/:id", component: CategoryComponent }
+      { path: "categories/:id", component: CategoryComponent },
+      { path: "companies/:id", component: OfferedServiceComponent }
     ]
   }
   // { path: '',   redirectTo: '/login', pathMatch: 'full' }

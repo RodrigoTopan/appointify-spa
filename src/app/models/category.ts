@@ -7,5 +7,12 @@ export class Category {
   id!: string;
   name!: string;
   image!: string;
-  companies!: any[];
+  companies!: CategoryCompany[];
+}
+
+export class CategoryCompany {
+  id!: string;
+  name!: string;
+  description!: string;
+  image!: string;
 }

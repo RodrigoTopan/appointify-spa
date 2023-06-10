@@ -20,6 +20,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './pages/components/card/card.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { OfferedServiceComponent } from './pages/offered-service/offered-service.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MenuComponent } from './pages/menu/menu.component';
     HomeComponent,
     CardComponent,
     CategoryComponent,
-    MenuComponent
+    MenuComponent,
+    OfferedServiceComponent
   ],
   imports: [
     RouterModule,
@@ -53,7 +55,8 @@ import { MenuComponent } from './pages/menu/menu.component';
     HomeComponent,
     CardComponent,
     CategoryComponent,
-    MenuComponent
+    MenuComponent,
+    OfferedServiceComponent
   ]
 })
 export class SharedModule { }
