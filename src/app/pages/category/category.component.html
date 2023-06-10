@@ -3,9 +3,9 @@
         <h2>Empresas na categoria {{ categoria.name }}</h2>
         <div class="section-list">
             <div *ngFor="let company of categoria.companies" class="card">
-                <div *ngIf="company.image" class="card-image"
-                    [ngStyle]="{'background-image': 'url(\'' + company.image + '\')'}"
-                ></div>
+                <div [ngStyle]="{'background-image': company.image ? 'url(\'' + company.image + '\')' : ''}"
+                    [ngClass]="company.image ? 'card-image': 'card-image-default'">
+                </div>
                 <div class="card-title">
                     <h3>{{ company.name }}</h3>
                     <p class="card-text">{{ company.description }}</p>

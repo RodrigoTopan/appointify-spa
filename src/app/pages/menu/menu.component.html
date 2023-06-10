@@ -34,13 +34,14 @@
         <h2>Serviços Recentes</h2>
         <div class="section-list">
             <div class="card" *ngFor="let service of usedServices">
+                <div [ngStyle]="{'background-image': service.image ? 'url(\'' + service.image + '\')' : ''}"
+                    [ngClass]="service.image ? 'card-image': 'card-image-default'">
+                </div>
                 <div class="card-title">
                     <h3>{{ service.name }}</h3>
                 </div>
                 <div class="card-body">
                     <h3>{{ service.description }}</h3>
-                </div>
-                <div class="card-body">
                     <h3>R$ {{ service.price }}</h3>
                 </div>
             </div>
