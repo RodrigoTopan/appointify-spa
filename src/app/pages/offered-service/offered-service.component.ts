@@ -43,7 +43,7 @@ export class OfferedServiceComponent implements OnInit {
     });
   }
 
-  navigateToServices(companyId: string) {
-    this.router.navigate(['/services', companyId]);
+  navigateToSchedules(serviceId: string) {
+    this.router.navigate(['/services', serviceId]);
   }
 }

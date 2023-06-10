@@ -9,7 +9,7 @@ import { OfferedService } from '../models/offeredService';
 })
 export class OfferedServicesService {
 
-  baseUrl = "http://localhost:8080/services";
+  baseUrl = "http://localhost:8080";
   endpoints = {};
   constructor(private httpClient: HttpClient) {}
 
@@ -17,7 +17,11 @@ export class OfferedServicesService {
     return this.httpClient.get(this.baseUrl);
   }
 
-  getAllByCompanyId(categoryId: string): Observable<OfferedService[]> {
-    return this.httpClient.get<OfferedService[]>(`${this.baseUrl}/${categoryId}`);
+  getAllByCompanyId(companyId: string): Observable<OfferedService[]> {
+    return this.httpClient.get<OfferedService[]>(`${this.baseUrl}/companies/${companyId}/services`);
+  }
+
+  getById(id: string): Observable<OfferedService> {
+    return this.httpClient.get<OfferedService>(`${this.baseUrl}/services/${id}`);
   }
 }

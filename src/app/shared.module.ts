@@ -21,6 +21,7 @@ import { CardComponent } from './pages/components/card/card.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { OfferedServiceComponent } from './pages/offered-service/offered-service.component';
+import { ScheduleComponent } from './pages/schedule/schedule.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { OfferedServiceComponent } from './pages/offered-service/offered-service
     CardComponent,
     CategoryComponent,
     MenuComponent,
-    OfferedServiceComponent
+    OfferedServiceComponent,
+    ScheduleComponent
   ],
   imports: [
     RouterModule,

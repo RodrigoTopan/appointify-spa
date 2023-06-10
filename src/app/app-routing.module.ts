@@ -6,6 +6,7 @@ import { CategoryComponent } from "./pages/category/category.component";
 import { MenuComponent } from "./pages/menu/menu.component";
 import { AuthGuard } from "./auth.guard";
 import { OfferedServiceComponent } from "./pages/offered-service/offered-service.component";
+import { ScheduleComponent } from "./pages/schedule/schedule.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
     children: [
       { path: "", component: MenuComponent },
       { path: "categories/:id", component: CategoryComponent },
-      { path: "companies/:id", component: OfferedServiceComponent }
+      { path: "companies/:id", component: OfferedServiceComponent },
+      { path: "services/:id", component: ScheduleComponent }
     ]
   }
   // { path: '',   redirectTo: '/login', pathMatch: 'full' }
