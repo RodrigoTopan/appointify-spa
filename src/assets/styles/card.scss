@@ -1,6 +1,11 @@
 .main-content {
     padding: 3.03797468vw; // 24px
     .section {
+        &-large {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         &-list {
             display: flex;
             flex-wrap: wrap;
@@ -50,6 +55,64 @@
                     font-size: 1.898734177vw; // 10px
                     padding: 1.26582278vw; // 10px
                     text-align: center;
+                }
+                &:hover {
+                    box-shadow: 0 2.53164557vw 2.53164557vw rgba(0, 0, 0, 0.4); // 0 20px 20px
+                }
+            }
+
+            .card-large {
+                display: flex;
+                flex-direction: column;
+                width: 63,291139241; // 500px
+                height: 29.11392405vw; // 230px
+                margin-bottom: 3.29113924vw; // 26px
+                background-color: #fff;
+                border-style: solid;
+                border-radius: 0.50632911vw; // 4px
+                box-shadow: 0 0.25316456vw 8px rgba(0, 0, 0, 0.7); // 0 2px 8px
+                transition: box-shadow 0.3s;
+                &-image {
+                    height: 22.78481013vw; // 180px
+                    background-size: cover;
+                    background-position: center;
+                    &-default {
+                        background-image: url("../images/not-found-image.png") !important;
+                        background-size: 6.329113924vw; // 50px
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        //height: 200px;
+                        height: 22.78481013vw;
+                        //background-size: cover;
+                        //background-position: center;
+                    }
+                }
+                &-title {
+                    height: 6.32911392vw; // 50px
+                    padding: 1.26582278vw; // 10px
+                    text-align: center;
+                    h3 {
+                        font-weight: 500;
+                        font-size: 2.27848101vw; // 18px
+                        line-height: 3.5443038vw; // 28px
+                    }
+                    p {
+                        font-size: 1.7721519vw; // 14px
+                        line-height: 2.53164557vw; // 20px
+                    }
+                }
+                &-body {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    font-size: 1.898734177vw; // 10px
+                    padding: 1.26582278vw; // 10px
+                    text-align: left;
+                    p {
+                        margin: 0;
+                    }
                 }
                 &:hover {
                     box-shadow: 0 2.53164557vw 2.53164557vw rgba(0, 0, 0, 0.4); // 0 20px 20px

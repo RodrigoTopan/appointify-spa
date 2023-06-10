@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { OfferedService } from 'src/app/models/offeredService';
 import { ScheduleAvailable } from 'src/app/models/scheduleAvailable';
-import { CompaniesService } from 'src/app/services/companies.service';
 import { OfferedServicesService } from 'src/app/services/offered-services.service';
 import { SchedulesService } from 'src/app/services/schedules.service';
+import { format } from 'date-fns';
 
 @Component({
   selector: 'app-schedule',
@@ -27,6 +27,7 @@ export class ScheduleComponent implements OnInit {
 
   getAvailableServices() {
     const offeredServiceId = this.route.snapshot.paramMap.get('id') as string;
+
     this.offeredServicesService.getById(offeredServiceId).subscribe({
       next: res => {
         this.offeredService = res;
@@ -46,4 +47,5 @@ export class ScheduleComponent implements OnInit {
   navigateToServices(companyId: string) {
     this.router.navigate(['/services', companyId]);
   }
+  
 }
