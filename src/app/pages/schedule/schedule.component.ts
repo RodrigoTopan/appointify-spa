@@ -14,6 +14,7 @@ import { format } from 'date-fns';
 export class ScheduleComponent implements OnInit {
   offeredService!: OfferedService;
   schedulesAvailable!: ScheduleAvailable[];
+  modalAberto = false;
 
   constructor(
     private router: Router,
