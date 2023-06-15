@@ -12,10 +12,27 @@ body {
 	font-family: 'Mulish', sans-serif;
 }
 
-p {
+p, input, h1, h2, h3 {
 	margin: 0;
 }
 
-input {
-	padding: 0;
+h2 {
+    font-weight: 500;
+    font-size: 2.53164557vw; // 20px
+    line-height: 4.05063291vw; // 32px
+	margin-bottom: 2.53164557vw; // 20px
+}
+
+h3 {
+    font-weight: 400;
+	font-size: 2.02531646vw; // 16px
+    line-height: 3.5443038vw; // 28px
+}
+
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
 }

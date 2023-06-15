@@ -1,0 +1,22 @@
+<div class="card">
+    <div *ngIf="imageUrl" class="card-image">
+        <img [src]="imageUrl">
+    </div>
+    <div *ngIf="!imageUrl" class="card-image-default">
+        <img src="../../../../assets/images/schedule.png">
+    </div>
+
+    <div *ngIf="serviceDescription" class="card-title">
+        <h3>{{ categoryName }}</h3>
+    </div>
+
+    <div *ngIf="serviceDescription" class="card-title">
+        <h3>Serviço: {{ serviceName }}</h3>
+    </div>
+    <div *ngIf="serviceDescription" class="card-body">
+        <h3>Descrição: {{ serviceDescription }}</h3>
+    </div>
+    <div *ngIf="servicePrice" class="card-body">
+        <h3>Preço: R$ {{ servicePrice }}</h3>
+    </div>
+</div>

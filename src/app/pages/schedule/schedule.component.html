@@ -1,0 +1,36 @@
+<div *ngIf="offeredService" class="main-content">
+    <section class="section" [ngClass]="{'section-large': offeredService}">
+        <h2>Horários disponíveis para o serviço {{ offeredService.name }}</h2>
+        <div class="section-list">
+            <div *ngFor="let schedulesAvailable of schedulesAvailable" class="card-large" (click)="modalAberto = true">
+                <div class="card-large-title">
+                    <h3>{{ schedulesAvailable.service.name }}</h3>
+                </div>
+                <div class="card-large-body">
+                    <p class="card-large-text">
+                        <b>Descrição: </b> {{ schedulesAvailable.service.description }}
+                    </p>
+                    <p class="card-large-text">
+                        <b>Funcionário:</b> {{ schedulesAvailable.employee.name }}
+                    </p>
+                    <p class="card-large-text">
+                        <b>Hora inicio: </b> {{ schedulesAvailable.schedule.startDate | date:'dd/MM/yyyy hh:mm' }}
+                    </p>
+                    <p class="card-large-text">
+                        <b>Hora fim: </b> {{ schedulesAvailable.schedule.endDate | date:'dd/MM/yyyy hh:mm' }}
+                    </p>
+                    <p class="card-large-text">
+                        <b>Preço: </b> {{ (schedulesAvailable.service.price | currency:'BRL') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section *ngIf="modalAberto" class="modal-agendamento">
+    <div class="modal-agendamento__dialog">
+        <h2>Agendamento realizado com sucesso</h2>
+        <button (click)="modalAberto = false">Ok, entendi</button>
+    </div>
+</section>

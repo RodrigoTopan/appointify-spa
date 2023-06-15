@@ -1,0 +1,117 @@
+
+
+/* Restante do código CSS */
+
+.header {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.53164557vw; // 20px
+  font-size: 1.7721519vw; // 14px
+  line-height: 2.53164557vw; // 20px
+}
+
+.logo img {
+  height: 6.32911392vw; // 50px
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggle {
+  display: none; /* Ocultar botão em telas maiores */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1.26582278vw; // 10px
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 3.16455696vw; // 25px
+  height: 0.37974684vw; // 3px
+  background-color: #333;
+  margin-bottom: 0.63291139vw; // 5px
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin-right: 1.26582278vw; // 10px
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.63291139vw; // 5px
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 50.63291139vw; // 400px
+  max-width: 90%;
+  margin: 12.65822785vw auto; // 100px
+  padding: 2.53164557vw; // 20px
+  border-radius: 0.63291139vw; // 5px
+  box-shadow: 0 0.25316456vw 0.50632911vw rgba(0, 0, 0, 0.2); // 2px 4px
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.26582278vw; // 10px
+  right: 1.26582278vw; // 10px
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: red;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block; /* Mostrar botão em telas menores */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Colocar itens em coluna em telas menores */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 1.26582278vw; // 10px
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar ul.open {
+    transform: translateX(0); /* Mostrar menu ao ser aberto */
+  }
+
+  .navbar li {
+    margin-right: 0;
+    margin-bottom: 1.26582278vw; // 10px
+  }
+}

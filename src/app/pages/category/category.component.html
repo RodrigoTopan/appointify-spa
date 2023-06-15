@@ -1,0 +1,15 @@
+<div *ngIf="categoria" class="main-content">
+    <section class="section">
+        <h2>Empresas na categoria {{ categoria.name }}</h2>
+        <div class="section-list">
+            <div *ngFor="let company of categoria.companies" class="card" (click)="navigateToServices(company.id)">
+                <div [ngStyle]="{'background-image': company.image ? 'url(\'' + company.image + '\')' : ''}"
+                    [ngClass]="company.image ? 'card-image': 'card-image-default'">
+                </div>
+                <div class="card-title">
+                    <h3>{{ company.name }}</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
